@@ -1,0 +1,23 @@
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .header {
+        margin-bottom: 56px;
+    }
+
+    .table {
+        flex-direction: column;
+    }
+
+    .for-remove {
+        display: none;
+    }
+
+    .table-item-value {
+
+        min-width: auto;
+
+    }
+}

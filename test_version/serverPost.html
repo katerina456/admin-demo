@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="media1024.css" type="text/css">
+    <link rel="stylesheet" href="media640.css" type="text/css">
+    <link rel="stylesheet" href="media320.css" type="text/css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Tracking Travel</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/apply/" class="form" method="post">
+            <h1 class="title">Добавление нового маршрута</h1>
+
+            <div class="form-item">
+                <label for="" class="label">Название маршрута</label>
+                <input type="text" class="input" placeholder="Название" name="title" required>
+            </div>
+
+            <div class="form-item">
+                <label for="" class="label">Описание маршрута</label>
+                <textarea class="input input-description" placeholder="Напишите" maxlength="120" name="description" required></textarea>
+
+            </div>
+
+            <div class="form-item file">
+                <p class="label">Фотографии с маршрута</p>
+
+                <input type="file" id="foto" accept="image/*" name="photo" required>
+
+                
+            </div>
+
+            <div class="form-item">
+                <p class="label">Фотография карты маршрута</p>
+
+                <input type="file" id="map" accept="image/*" name="mapPhoto" required>
+
+            </div>
+
+            <div class="form-item">
+                <label for="" class="label">Пиковая высота маршрута</label>
+                <input type="text" class="input" placeholder="100 м" name="peak" required>
+            </div>
+
+            <div class="form-item">
+                <label for="" class="label">Длина маршрута</label>
+                <input type="text" class="input" placeholder="0.5 км" name="distance" required>
+            </div>
+
+            <div class="form-item">
+                <label for="" class="label">Длительность маршрута</label>
+                <div class="neighbour">
+                    <input type="text" class="input neighbour-item" placeholder="1 ч" name="duration" required>
+                   
+                </div>
+            </div>
+
+            <div class="form-item">
+
+                <label for="" class="label">Ссылка на маршрут</label>
+                <input type="text" class="input" placeholder="Ссылка на маршрут" name="mapLink" required>
+
+            </div>
+
+            <button type="submit" class="submit">Загрузить маршрут</button>
+            
+        </form>
+        <div class="result"></div>
+    </div>
+
+    <script src="serverPost.js"></script>
+</body>
+</html>

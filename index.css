@@ -1,0 +1,269 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #111111;
+    font-style: normal;
+    font-size: 16px;
+    background: #F5F5F5;
+    position: relative;
+}
+
+.header {
+    background: #FFFFFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+
+.container {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.button-create {
+    width: 175px;
+    height: 40px;
+    border: 0;
+    background: #115E59;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.button-create:hover {
+    background: #0D4743;
+}
+
+.main {
+    margin-top: 160px
+}
+
+
+.section {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.management {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.managmant-item {
+    margin: 0;
+    padding: 8px;
+    background: #F7F7F7;
+    border-radius: 8px;
+}
+
+.item-id {
+    margin: 0;
+    padding: 0;   
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.management-buttons-box {
+    display: flex;
+}
+
+.buttons {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.buttons-edit {
+    border: 1px solid #115E59;
+    background: transparent;
+    background-image: url(./icon/edit.svg);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #115E59;
+}
+
+.buttons-edit:hover {
+    background: #115E59;
+    background-image: url(./icon/edit-hover.svg);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #F5F5F5;
+}
+
+.buttons-del {
+    background: #E01920;
+    border: 0;
+    color: #F5F5F5;
+}
+
+.buttons-del:hover {
+    background: #A81318;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+.table-part {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.last{
+    border-right: 1px solid #DDDDDD;
+}
+
+.table-item {
+    display: flex;
+    margin: 0;
+    border-left: 1px solid #DDDDDD;
+}
+
+.table-item-name {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 12px;
+    min-width: 168px;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+.table-item-value {
+    line-height: 24px;
+    color: #555555;
+    padding: 12px;
+    
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 360px;
+
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.width {
+    min-width: 360px;
+}
+
+.p {
+    margin: 0;
+    padding: 0;
+}
+
+.photo {
+    background: rgba(55, 109, 70, 0.1);
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    width: 116px;
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.removeInfo {
+    width: 375px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    background: #FFFFFF;
+    box-shadow: 0px 16px 24px rgba(2, 9, 9, 0.16);
+    border-radius: 8px;
+}
+
+.removeTitle {  
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+    margin:0;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.removeInfo-button-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.removeInfo-button {
+    
+    border-radius: 4px;
+    background-image: none;
+    padding: 8px 20px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.removeInfo-button:first-of-type {
+    margin-right: 16px;
+}
+
+.removeInfo-button:hover {
+    background-image: none;
+}
+
+.overlay {
+    background: #020909;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 944px;
+    }
+    
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .table-item-value {
+        min-width: auto;
+    }
+    
+    .width {
+        min-width: auto;
+    }
+
+    .table-item-value {
+
+        min-width: auto;
+
+    }
+}

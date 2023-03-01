@@ -1,0 +1,362 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #111111;
+    font-style: normal;
+    position: relative;
+}
+
+.container {
+    max-width: 552px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    background: #FFFFFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.button-create {
+    width: 185px;
+    height: 40px;
+    border: 0;
+    background: #115E59;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.button-create:hover {
+    background: #0D4743;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.form-item {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.input {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+
+    padding: 12px;
+    height: 48px;
+    margin-right: 4px;
+    min-width: 80px;
+
+    background: inherit;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+}
+
+.input ::placeholder {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #A9A9A9;
+}
+
+.input-description {
+    height: 164px;
+    resize: vertical;
+}
+
+.input:focus,  .input:active {
+    background: #FFFFFF;
+    border: 1px solid #115E59;
+    outline: 0;
+    
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+}
+
+.selected-country {
+    display: flex;
+    justify-content: space-between;
+}
+
+.country {
+    display: flex;
+}
+
+.flag {
+    margin-right: 9px;
+    background-image: url(../icon/flag-montenegro.jpg);
+    width: 24px;
+    height: 24px;
+}
+
+.country-button {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    
+}
+
+.down {
+    background-image: url(../icon/arrow-drop-down.svg);
+}
+
+.up {
+    background-image: url(../icon/arrow-drop-up.svg);
+}
+
+.country-list {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.country-list-item {
+    padding: 12px;
+}
+
+.country-list-item:hover {
+    background: #DDDDDD;
+}
+
+.select {
+    background: #EEEEEE;
+}
+
+.description-count {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.4px;
+    color: #A9A9A9;
+
+    margin: 0;
+    margin-top: 4px;
+}
+
+.neighbour {
+    display: flex;
+}
+
+.neighbour-item {
+    flex-grow: 1;
+}
+
+.file > .neighbour:not(:first-of-type) {
+    margin-top: 4px;
+}
+
+.button {
+    border: 1px solid #115E59;
+    border-radius: 8px;
+    background: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #115E59;
+    color: #FFFFFF;
+}
+
+.button-map, .button-foto {
+    width: 174px;
+    height: 48px;
+
+    padding: 12px;
+    margin-bottom: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #115E59;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#map, #foto, #country {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.clip {
+    width: 24px;
+    height: 24px;
+}
+
+#map-path, #foto-path {
+    align-self: center;
+    margin-left: 20px;
+}
+
+.submit {
+    width: 205px;
+    height: 56px;
+    background: #115E59;
+    border-radius: 8px;
+    border: none;
+
+    margin-top: 40px;
+    margin-bottom: 24px;
+    padding: 16px;
+    cursor: pointer;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    align-items: center;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.submit:hover {
+    background: #0D4743;
+}
+
+.result, .mistake, .demo {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 450px; 
+
+    background: #FFFFFF;
+    box-shadow: 0px 16px 24px rgba(2, 9, 9, 0.16);
+    border-radius: 8px;
+    padding: 32px;
+
+    bottom: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-button {
+    padding: 8px 15px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 170px;
+}
+
+.result-button:first-of-type {
+    margin-right: 10px;
+}
+
+.result-p {
+    font-weight: 400;
+    
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.view {
+    display: none;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-foto {
+    position: relative;
+    margin-right: 5px;
+}
+
+.box-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.preview-foto {
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.words {
+    text-overflow: ellipsis; /* will make [...] at the end */
+    width: 360px; /* change to your preferences */
+    white-space: nowrap; /* paragraph to one line */
+    overflow:hidden; /* older browsers */
+}
+
+.overlay {
+    background: #020909;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

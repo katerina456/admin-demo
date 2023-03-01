@@ -1,0 +1,9 @@
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 464px;
+    }
+
+    .words {
+        width: 270px;
+    }
+}

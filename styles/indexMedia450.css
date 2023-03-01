@@ -1,0 +1,33 @@
+@media screen and (max-width: 450px) {
+    .container {
+        max-width: none;
+    }
+
+    .table-item {
+        flex-direction: column;
+    }
+
+    .container-header {
+        padding: 12px 0;
+    }
+
+    .button-create {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .table-item-name {
+        background: #F7F7F7;
+    }
+
+    .removeInfo {
+        width: auto;   
+    }
+
+    .removeTitle {  
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+}
